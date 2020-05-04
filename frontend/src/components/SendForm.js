@@ -16,7 +16,6 @@ export default class SendForm extends Component {
   }
 
   sendMessage = () => {
-    console.log(" SendForm/send message: " + this.state.message);
     this.props.socket.emit(this.state.message);
     this.setState({message: ""})
   }
